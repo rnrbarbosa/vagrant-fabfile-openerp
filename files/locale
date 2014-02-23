@@ -1,0 +1,13 @@
+LANG="pt_PT.UTF-8"
+LANGUAGE=pt_PT.UTF-8
+LC_ALL="pt_PT.utf8"
+LC_TYPE="pt_PT.utf8"
+LC_NUMERIC="p  t_PT.utf8"
+LC_TIME="pt_PT.utf8"
+LC_MONETARY="pt_PT.utf8"
+LC_PAPER="pt_PT.utf8"
+LC_NAME="pt_PT.utf8"
+LC_ADDRESS="pt_PT.utf8"
+LC_TELEPHONE="pt_PT.utf8"
+LC_MEASUREMENT="pt_PT.utf8"
+LC_IDENTIFICATION="pt_PT.utf8"
