@@ -17,7 +17,6 @@ def postgres():
     put('files/locale','/etc/default/locale',use_sudo=True)
     sudo('apt-get -y install language-pack-pt-base language-pack-pt')
     sudo('apt-get -y install postgresql')
-    sudo('su - postgres -c "createuser -s openerp"')
 
 def openerp():
     sudo('wget http://nightly.openerp.com/7.0/nightly/deb/openerp_7.0-latest-1.tar.gz')
@@ -25,8 +24,10 @@ def openerp():
     sudo('mkdir /etc/openerp')
     sudo('tar zvxf openerp_7.0-latest-1.tar.gz -C /opt/openerp  --strip-components 1') 
 
-def instance(instance='openerp'):
+def instance(instance='erp'):
     env.instance = instance
+
+    sudo('su - postgres -c "createuser -s %(instance)s"' % env)
 
     sudo('useradd -m -d /home/%(instance)s -s /bin/true %(instance)s' % env)
     sudo('su -  postgres -c "createuser -s %(instance)s"' % env)
@@ -56,4 +57,4 @@ def deploy():
     packages()
     postgres()
     openerp()
-    instance('openerp')
+    instance('erp')
