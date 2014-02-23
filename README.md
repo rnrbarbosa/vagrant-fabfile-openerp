@@ -1,4 +1,4 @@
-vagrant-fabifile-openerp
+vagrant-fabfile-openerp
 ========================
 
 Vagrant with Fabfile to install openerp
