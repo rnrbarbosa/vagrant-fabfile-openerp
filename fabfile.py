@@ -53,7 +53,7 @@ def instance(instance='openerp'):
 
 @task
 def deploy():
-#    packages()
-#    postgres()
-#    openerp()
+    packages()
+    postgres()
+    openerp()
     instance('openerp')
