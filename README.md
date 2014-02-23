@@ -3,19 +3,18 @@ vagrant-fabfile-openerp
 
 Vagrant with Fabfile to install openerp
 
+### Add Fabric Provisioner support on vagrant:
 
-Add Fabric Provisioner support on vagrant:
+> $ vagrant plugin install vagrant-fabric
 
-$ vagrant plugin install vagrant-fabric
+### Download the box
 
-Download the box
+> $ vagrant box add precise32 http://files.vagrantup.com/precise32.box
 
-$ vagrant box add precise32 http://files.vagrantup.com/precise32.box
-
-Start box
-$ vagrant up
+### Start box
+> $ vagrant up
 
 
-Open on Browser
+### Open on Browser
 
-http://localhost:8069
+> http://localhost:8069
