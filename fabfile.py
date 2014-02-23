@@ -27,8 +27,6 @@ def openerp():
 def instance(instance='erp'):
     env.instance = instance
 
-    sudo('su - postgres -c "createuser -s %(instance)s"' % env)
-
     sudo('useradd -m -d /home/%(instance)s -s /bin/true %(instance)s' % env)
     sudo('su -  postgres -c "createuser -s %(instance)s"' % env)
     sudo('mkdir -p  /home/%(instance)s/addons' % env)
